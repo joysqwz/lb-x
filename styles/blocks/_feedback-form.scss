@@ -1,0 +1,39 @@
+.form {
+	@include flex-center;
+	flex-direction: row;
+	font-size: 14px;
+
+	&__input {
+		outline: none;
+		border: none;
+		width: 256px;
+		height: 49px;
+		border-top-left-radius: 24px;
+		border-bottom-left-radius: 24px;
+		background-color: #E1E1E1;
+		padding: 7px 22px;
+
+		@media (width <=768px) {
+			width: 245px;
+		}
+	}
+
+	&__button {
+		@include reset-button;
+		width: 100px;
+		height: 49px;
+		border-top-right-radius: 24px;
+		border-bottom-right-radius: 24px;
+		background-color: var(--color-pink);
+		padding: 7px 22px;
+		color: #ffffff;
+		font-weight: 400;
+		text-align: center;
+		cursor: pointer;
+
+		@media (width <=768px) {
+			width: 90px;
+			padding-left: 18px;
+		}
+	}
+}

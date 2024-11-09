@@ -1,0 +1,55 @@
+.header {
+	position: relative;
+	z-index: 2;
+	background-color: var(--color-black);
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 75px;
+	}
+
+	&__left {
+		@include flex-center;
+		gap: 41px;
+	}
+
+	&__list {
+		@include flex-center;
+		position: relative;
+		gap: 33px;
+
+		@include mobile-s {
+			&> :nth-last-child(-n+2) {
+				display: none;
+			}
+		}
+
+		&-item {
+			position: relative;
+
+			&--cart {
+				&::after {
+					content: attr(data-counter);
+					@include flex-center;
+					position: absolute;
+					color: #ffffff;
+					font-size: 12px;
+					right: -10px;
+					top: -10px;
+					width: 19px;
+					height: 19px;
+					border-radius: 100%;
+					background-color: var(--color-pink);
+				}
+			}
+
+			&--m {
+				@include hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

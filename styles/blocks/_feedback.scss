@@ -1,0 +1,71 @@
+.feedback {
+	background-image: url('./../images/form-bg.webp');
+	background-size: cover;
+
+	@media (width <=1600px) {
+		background-image: url('./../images/form-bg-1600.webp');
+	}
+
+	@media (width <=1280px) {
+		background-position: -200px;
+	}
+
+	@media (width <=768px) {
+		background-position: -500px;
+	}
+
+	&__body {
+		@include flex-center;
+		height: 448px;
+		gap: 300px;
+
+		@media (width < 1280px) {
+			flex-direction: column;
+			height: 614px;
+			gap: 48px;
+		}
+	}
+
+	&__review {
+		@include flex-center;
+		flex-direction: column;
+		gap: 30px;
+		width: 360px;
+	}
+
+	&__message {
+		font-style: italic;
+		font-size: 20px;
+		text-align: center;
+		color: #222224;
+
+		@media (width <=768px) {
+			font-size: 18px;
+		}
+	}
+
+	&__form {
+		@include flex-center;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.67;
+		text-align: center;
+		color: #222224;
+	}
+
+	&__description {
+		font-size: 18px;
+		line-height: 1.67;
+		text-align: center;
+		color: #222224;
+		margin-bottom: 32px;
+
+		@media (width <=768px) {
+			font-size: 14px;
+		}
+	}
+}

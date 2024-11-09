@@ -1,0 +1,50 @@
+.featured {
+
+	&__body {
+		@include flex-center;
+		flex-direction: column;
+		padding: 35px;
+
+		@media (width < 1280px) {
+			padding: 16px;
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+	}
+
+	&__description {
+		font-size: 14px;
+		color: #9F9F9F;
+		margin-bottom: 48px;
+	}
+
+	&__cards {
+		@include flex-center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 30px;
+		margin-bottom: 48px;
+
+		@media (width < 1280px) {
+			gap: 16px;
+		}
+	}
+
+	&__card {
+		width: 360px;
+		height: 581px;
+		background-color: #F8F8F8;
+	}
+
+	&__button {
+		@include reset-button;
+		cursor: pointer;
+		width: 212px;
+		height: 48px;
+		border: 1px solid var(--color-pink);
+		color: #F26376;
+		font-size: 16px;
+	}
+}

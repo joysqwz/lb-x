@@ -1,0 +1,28 @@
+.text {
+	font-size: 32px;
+
+	&--big {
+		font-size: 48px;
+		font-weight: 900;
+
+		@media (width <=768px) {
+			font-size: 44px;
+		}
+	}
+
+	&--pink {
+		color: var(--color-pink);
+	}
+
+	&--lg {
+		font-size: 32px;
+
+		@media (width <=768px) {
+			font-size: 24px;
+		}
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+}

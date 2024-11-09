@@ -1,0 +1,63 @@
+.card {
+	&__content {
+		padding: 25px 16px 20px 16px;
+		height: 161px;
+		line-height: 1.25;
+	}
+
+	&__image-wrapper {
+		position: relative;
+		cursor: pointer;
+
+		@include hover {
+
+			.card__image {
+				filter: brightness(50%);
+			}
+
+			.card__add {
+				display: block;
+			}
+		}
+	}
+
+	&__add {
+		@include abs-center;
+		@include reset-button;
+		display: none;
+		cursor: pointer;
+		color: #ffffff;
+		width: 140px;
+		height: 44px;
+		border: 1px solid #ffffff;
+		padding-left: 30px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 10px;
+			display: block;
+			background-image: url(../../images/icons/cart.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			width: 26px;
+			height: 24px;
+		}
+	}
+
+	&__title {
+		font-size: 13px;
+		margin-bottom: 13px;
+	}
+
+	&__description {
+		font-size: 14px;
+		font-weight: 300;
+		color: #5d5d5d;
+		margin-bottom: 18px;
+	}
+
+	&__price {
+		font-size: 16px;
+	}
+}
