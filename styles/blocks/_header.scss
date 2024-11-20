@@ -20,7 +20,7 @@
 		position: relative;
 		gap: 33px;
 
-		@include mobile-s {
+		@media (width < 480px) {
 			&> :nth-last-child(-n+2) {
 				display: none;
 			}

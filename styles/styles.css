@@ -180,7 +180,7 @@ svg * {
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
-@media (max-width: 480px) {
+@media (width < 480px) {
   .container--header {
     padding: 0 16px;
   }
@@ -189,20 +189,6 @@ svg * {
   .container {
     padding-inline: 16px;
   }
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  border: 0 !important;
-  padding: 0 !important;
-  white-space: nowrap !important;
-  -webkit-clip-path: inset(100%) !important;
-          clip-path: inset(100%) !important;
-  clip: rect(0 0 0 0) !important;
-  overflow: hidden !important;
 }
 
 body {
@@ -240,7 +226,7 @@ h2 {
   position: relative;
   gap: 33px;
 }
-@media (max-width: 480px) {
+@media (width < 480px) {
   .header__list > :nth-last-child(-n+2) {
     display: none;
   }

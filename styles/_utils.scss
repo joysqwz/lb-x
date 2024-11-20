@@ -4,7 +4,7 @@
   padding-inline: var(--container-padding-x);
 
   &--header {
-    @include mobile-s {
+    @media (width < 480px) {
       padding: 0 16px;
     }
   }
@@ -12,8 +12,4 @@
   @media (width < 1280px) {
     padding-inline: 16px;
   }
-}
-
-.visually-hidden {
-  @include visually-hidden;
 }
