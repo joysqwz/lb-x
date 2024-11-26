@@ -514,6 +514,10 @@ h2 {
   color: #F26376;
   font-size: 16px;
 }
+.featured__button-catalog {
+  color: #F26376;
+  text-decoration: none;
+}
 
 .card__content {
   padding: 25px 16px 20px 16px;
@@ -814,21 +818,25 @@ h2 {
   padding: 33px 37px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
-.modal__wrapper ul * {
-  padding-left: 10px;
-  text-decoration: none;
-  color: #6F6E6E;
-}
 @media (width <= 1600px) {
   .modal__wrapper {
     right: 0;
   }
 }
 .modal__title {
-  display: flex;
-  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 24px;
+}
+.modal__list {
+  margin: 24px 0 12px 0;
+}
+.modal__list-title {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+.modal__list-item {
+  text-decoration: none;
+  color: #6F6E6E;
+  padding-left: 22px;
 }
 .modal__close {
   position: absolute;
@@ -842,11 +850,6 @@ h2 {
   height: 20px;
   top: 16px;
   right: 16px;
-}
-
-.list__title {
-  margin-bottom: 12px;
-  color: var(--color-pink);
 }
 
 .active {

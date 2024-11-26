@@ -10,22 +10,28 @@
 		padding: 33px 37px;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
-		& ul * {
-			padding-left: 10px;
-			text-decoration: none;
-			color: #6F6E6E;
-		}
-
 		@media (width <=1600px) {
 			right: 0;
 		}
 	}
 
 	&__title {
-		display: flex;
-		font-size: 18px;
 		font-weight: 600;
-		margin-bottom: 24px;
+	}
+
+	&__list {
+		margin: 24px 0 12px 0;
+
+		&-title {
+			color: var(--color-pink);
+			text-decoration: none;
+		}
+
+		&-item {
+			text-decoration: none;
+			color: #6F6E6E;
+			padding-left: 22px;
+		}
 	}
 
 	&__close {
@@ -40,13 +46,6 @@
 		height: 20px;
 		top: 16px;
 		right: 16px;
-	}
-}
-
-.list {
-	&__title {
-		margin-bottom: 12px;
-		color: var(--color-pink);
 	}
 }
 
