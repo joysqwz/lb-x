@@ -1,5 +1,4 @@
-.featured {
-
+.catalog-items {
 	&__body {
 		@include flex-center;
 		flex-direction: column;
@@ -50,6 +49,36 @@
 		&-catalog {
 			color: #F26376;
 			text-decoration: none;
+		}
+
+		&-page {
+			font-weight: 300;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			border: 1px solid #e0e0e0;
+			border-radius: 5px;
+			background-color: #fff;
+
+			.arrow,
+			.page,
+			.dots {
+				margin: 0 5px;
+				font-size: 18px;
+				color: #b0b0b0;
+				cursor: pointer;
+				user-select: none;
+
+				&.active {
+					color: #ff4d4d;
+				}
+			}
+
+			.arrow {
+				font-weight: bold;
+				color: #000;
+			}
 		}
 	}
 }
