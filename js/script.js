@@ -1,28 +1,34 @@
 const goods = [
-	{ title: 'Shirt', price: 250 },
-	{ title: 'Socks', price: 200 },
-	{ title: 'Jacket', price: 150 },
-	{ title: 'Shoes', price: 100 }
+	{ title: 'ELLERY X M\'O CAPSULE 1', price: 300 },
+	{ title: 'ELLERY X M\'O CAPSULE 2', price: 250 },
+	{ title: 'ELLERY X M\'O CAPSULE 3', price: 200 },
+	{ title: 'ELLERY X M\'O CAPSULE 4', price: 150 },
+	{ title: 'ELLERY X M\'O CAPSULE 5', price: 100 },
+	{ title: 'ELLERY X M\'O CAPSULE 6', price: 50 },
 ]
-
-const renderGoodsItem = (title, price) => {
-	return `<div class="goods-item"><h3>$(title)</h3><p>$(price)</p></div>`
-}
-
-const renderGoodsList = (list) => {
-	let goodsList = list.map(item => renderGoodsItem(item.title, item.price))
-	document.querySelector('.goods-list').innerHTML = goodsList
-}
-
-renderGoodsList(goods)
 
 class GoodsItem {
 	constructor(title, price) {
 		this.title = title
 		this.price = price
 	}
+
 	render() {
-		return `<div class="goods-item"><h3>$(this.title)</h3><p>$(this.price)</p></div>`
+		return `<article class="catalog-items__card card goods-item">
+            <div class="card__image-wrapper">
+              <img class="card__image" src="./images/catalog-items-1.webp" alt="" />
+              <button class="card__add">Add to Cart</button>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">${this.title}</h3>
+              <p class="card__description">
+                Known for her sculptural takes on traditional tailoring,
+                Australian arbiter of cool Kym Ellery teams up with Moda
+                Operandi.
+              </p>
+              <p class="card__price text text--pink">$${this.price}</p>
+            </div>
+          </article>`
 	}
 }
 
@@ -30,21 +36,30 @@ class GoodsList {
 	constructor() {
 		this.goods = []
 	}
+
 	fetchGoods() {
 		this.goods = [
-			{ title: 'Shirt', price: 250 },
-			{ title: 'Socks', price: 200 },
-			{ title: 'Jacket', price: 150 },
-			{ title: 'Shoes', price: 100 },
+			{ title: 'ELLERY X M\'O CAPSULE 1', price: 300 },
+			{ title: 'ELLERY X M\'O CAPSULE 2', price: 250 },
+			{ title: 'ELLERY X M\'O CAPSULE 3', price: 200 },
+			{ title: 'ELLERY X M\'O CAPSULE 4', price: 150 },
+			{ title: 'ELLERY X M\'O CAPSULE 5', price: 100 },
+			{ title: 'ELLERY X M\'O CAPSULE 6', price: 50 },
 		]
 	}
+
 	render() {
-		let listHtml = ''
-		this.goods.forEach(good => {
-			const goodItem = new GoodsItem(good.title, good.price)
-			listHtml += goodItem.render()
-		})
-		document.querySelector('.goods-list').innerHTML = listHtml
+		const goodsListElement = document.querySelector('.goods-list')
+		if (goodsListElement) {
+			let listHtml = ''
+			this.goods.forEach(good => {
+				const goodItem = new GoodsItem(good.title, good.price)
+				listHtml += goodItem.render()
+			})
+			goodsListElement.innerHTML = listHtml
+		} else {
+			console.error('Error: .goods-list element not found in the DOM.')
+		}
 	}
 }
 

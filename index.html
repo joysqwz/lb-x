@@ -104,8 +104,9 @@
         <p class="catalog-items__description">
           Shop for items based on what we catalog-items in this week
         </p>
-        <div class="catalog-items__cards">
-          <article class="catalog-items__card card">
+        <!--  -->
+        <div class="catalog-items__cards goods-list">
+          <!-- <article class="catalog-items__card card">
             <div class="card__image-wrapper">
               <img class="card__image" src="./images/catalog-items-1.webp" alt="" />
               <button class="card__add">Add to Cart</button>
@@ -119,8 +120,8 @@
               </p>
               <p class="card__price text text--pink">$52.00</p>
             </div>
-          </article>
-          <article class="catalog-items__card card">
+          </article> -->
+          <!-- <article class="catalog-items__card card">
             <div class="card__image-wrapper">
               <img class="card__image" src="./images/catalog-items-2.webp" alt="" />
               <button class="card__add">Add to Cart</button>
@@ -194,8 +195,9 @@
               </p>
               <p class="card__price text text--pink">$52.00</p>
             </div>
-          </article>
+          </article> -->
         </div>
+        <!--  -->
         <button class="catalog-items__button">
           Browse All Product
         </button>
@@ -246,6 +248,7 @@
             <input class="form__input" type="email" id="email" name="email" placeholder="Enter Your Email" required
                    autocomplete='email' />
             <button class="form__button">Subscribe</button>
+            <div class="error-message">Введите корректный адрес электронной почты</div>
           </form>
         </div>
       </div>
@@ -314,6 +317,22 @@
     })
     modalClose.addEventListener('click', () => {
       modal.classList.remove('active')
+    })
+
+    const emailInput = document.getElementById('email')
+    const form = document.querySelector('.feedback__form')
+    const errorMessage = document.querySelector('.error-message')
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      const email = emailInput.value.trim()
+      const emailRegex = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@[a-zA-Z]+\.[a-zA-Z]{2,}$/
+      if (emailRegex.test(email)) {
+        emailInput.classList.remove('form__input--error')
+        errorMessage.style.display = 'none'
+      } else {
+        emailInput.classList.add('form__input--error')
+        errorMessage.style.display = 'block'
+      }
     })
   </script>
   <script src="./js/script.js"></script>
