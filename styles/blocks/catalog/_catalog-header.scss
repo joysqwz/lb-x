@@ -14,6 +14,11 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
+			@media (width <=600px) {
+				flex-direction: column;
+				gap: 32px;
+			}
 		}
 
 		&__left-item {
