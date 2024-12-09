@@ -1,2 +1,2 @@
-При клике на MAN открытие второй страницы 
-![alt text]https://imgur.com/a/eunKEXy.png
+При клике на MAN открытие второй страницы
+https://imgur.com/a/eunKEXy
