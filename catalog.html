@@ -27,7 +27,9 @@
 				<img width="29" height="29" class="list__image" src="./images/icons/Profile.svg" alt="" />
 			</li>
 			<li data-counter="5" class="header__list-item header__list-item--cart">
-				<img width="32" height="29" class="list__image" src="./images/icons/cart.svg" alt="" />
+				<a href="cart.html">
+					<img width="32" height="29" class="list__image" src="./images/icons/cart.svg" alt="" />
+				</a>
 			</li>
 		</ul>
 		<div class="modal__wrapper">
@@ -335,6 +337,7 @@
 					<input class="form__input" type="email" id="email" name="email" placeholder="Enter Your Email" required
 								 autocomplete='email' />
 					<button class="form__button">Subscribe</button>
+					<div class="error-message">Введите корректный адрес электронной почты</div>
 				</form>
 			</div>
 		</div>
