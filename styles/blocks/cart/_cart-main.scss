@@ -1,0 +1,27 @@
+.cart {
+	&__body {
+		padding: 96px 00;
+		@include flex-center;
+		flex-direction: column;
+	}
+
+	&__wrapper {
+		@include flex-center;
+		gap: 128px;
+	}
+
+	&-items {
+		width: 652px;
+		height: 306px;
+
+		&__wrapper {
+			@include flex-center;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		&__image {
+			height: 306px;
+		}
+	}
+}
